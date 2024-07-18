@@ -1,5 +1,6 @@
 # ETL-Pipeline-Project
 Project Overview: Create an ETL Pipeline that extracts data from a public API, transforms the data, and loads it into a database for analysis.
+
 Tools and Technologies: Python, SQL, Pandas, Airflow, PostgreSQL, and Docker.
 
 Steps:
