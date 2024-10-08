@@ -1,13 +1,5 @@
-# ETL-Pipeline-Project
-Project Overview: Create an ETL Pipeline that extracts data from a public API, transforms the data, and loads it into a database for analysis.
+Hello! I'm Jacquelyn Garcia, a junior Data Science major at UC San Diego with a passion for building data pipelines and working on innovative data engineering projects. Through my studies and internships, I have gained experience in various technologies, including Python, SQL, Spark, Delta Lake, and more.
 
-Tools and Technologies: Python, SQL, Pandas, Airflow, PostgreSQL, and Docker.
+In this repository, you'll find a comprehensive Data Engineering Project that leverages modern tools and frameworks to create a complete data pipeline. The project includes web scraping real-estate data, uploading it to S3, processing it with Spark and Delta Lake, integrating data science through Jupyter, ingesting into Druid, visualizing with Apache Superset, and orchestrating everything using Dagster. This project reflects my interest in real-world data engineering challenges and showcases my ability to work with cloud-agnostic architectures, Kubernetes, and various open-source technologies.
 
-Steps:
-1. Define the Project Scope
-2. Set up Development Environment
-3. Extract Data
-4. Transform Data
-5. Load Data
-6. Orchestrate the Pipeline
-7. Documentation and Presentation
+Feel free to explore the code, follow along with the setup instructions, and check out the documentation to see how the pipeline comes together. I'm always open to feedback, collaboration, or any questions you may have. Happy coding!
