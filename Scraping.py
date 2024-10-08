@@ -1,23 +1,23 @@
 from bs4 import BeautifulSoup
 import requests
-import pandas as pd
 
-url = 'https://www.zillow.com/'
-page = requests.get(url)
-soup = BeautifulSoup(page.content, 'html.parser')
+url = 'https://www.immoscout24.ch/en/house/buy/city-bern?r=7&map=1'
 
-# extract property details
-properties = []
-for listing in soup.find_all('div', class_='property-listing'):
-    name = listing.find('h2').text
-    price = listing.find('span', class_='price').text
-    location = listing.find('span', class_='location').text
-    properties.append([name, price, location])
+# make request and check if it succeeds
+response = requests.get(url)
+if response.status_code == 200:
+    print("Successfully fetched the data!")
+else:
+    print(f"Failed to fetch data. Status code: {response.status_code}")
+    exit()
 
-# store data in a DataFrame
-df = pd.DataFrame(properties, columns=['Name', 'Price', 'Location'])
+# parse the HTML content
+soup = BeautifulSoup(response.text, "html.parser")
 
-# save the DataFrame to a CSV file
-df.to_csv('real_estate_data.csv', index=False)
+# find all anchor (<a>) elements and print their text and href
+links = soup.findAll('a')
+print(f"Number of links found: {len(links)}")
 
-print("Data has been saved to real_estate_data.csv")
+# print link content to inspect
+for i, link in enumerate(links):
+    print(f"Link {i}: Text: {link.text.strip()} - Href: {link.get('href')}")
